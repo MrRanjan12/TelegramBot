@@ -22,7 +22,7 @@ app.use(helmet()); // 🛡️ Secure HTTP headers
 
 app.use(cors({
   origin: [
-    "https://your-frontend-domain.com", // ✅ Replace with your frontend domain
+    "https://smartchattldr-ai.netlify.app/", // ✅ Replace with your frontend domain
     "http://localhost:5173",
   ],
   methods: ["GET", "POST"],
