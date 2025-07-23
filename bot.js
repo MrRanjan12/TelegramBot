@@ -21,11 +21,11 @@ app.use(express.json());
 app.use(helmet()); // 🛡️ Secure HTTP headers
 
 app.use(cors({
-  origin: [
-    "https://smartchattldr-ai.netlify.app/", // ✅ Replace with your frontend domain
-  ],
+  origin: "https://smartchattldr-ai.netlify.app",
   methods: ["GET", "POST"],
+  credentials: true
 }));
+
 
 const bot = new Bot(TELEGRAM_TOKEN);
 const groq = new Groq({ apiKey: GROQ_API_KEY });
